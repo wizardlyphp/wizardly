@@ -1,5 +1,5 @@
 {
-    "name": "wizardly/wizardly",
+    "name": "wizardlyphp/wizardly",
     "description": "A Laravel package for managing wizards.",
     "keywords": [
         "php",
@@ -14,9 +14,13 @@
         }
     ],
     "require": {
-        "php": "^8.3.0"
+        "php": "^8.3.0",
+        "illuminate/contracts": "^11.37",
+        "illuminate/http": "^11.37",
+        "illuminate/support": "^11.37"
     },
     "require-dev": {
+        "laravel/framework": "^11.37",
         "laravel/pint": "^1.18.1",
         "pestphp/pest": "^3.5.1",
         "pestphp/pest-plugin-type-coverage": "^3.1",
@@ -32,6 +36,13 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wizardly\\WizardlyServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable",
